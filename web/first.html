@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+       
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="box">
+        <h1>REGISTRATION </h1>
+    
+        <form method="post" action="reg2.jsp" onsubmit ="return validate()" >
+            <table>
+                <tr>
+                    <td>
+            <lable> FIRSTNAME:</lable>
+            </td>
+            <td>
+            <input type="text" placeholder="firstname " name="firstname" required  />
+            </td>
+            </tr>
+            <tr>
+                <td>
+                <lable>LASTNAME</lable>
+            </td>
+            <td>
+                <input type="text"  placeholder="lastname" name="lastname"  required  />
+            </td>
+            </tr>
+            <tr>
+                <td>
+                <lable>EMAIL:</lable>
+            </td>
+            <td>
+                 <input type="email" placeholder="exam@exam.com" name="email"  required   />
+            </td>
+            </tr>
+            <tr>
+                <td>
+                 <lable>ADMIN NAME:</lable>
+            </td>
+            <td>
+                <input type="text" placeholder="admin name" name="adminname"  required   />
+            </td>
+            </tr>
+            <tr>
+                <td>
+                  <lable> PASSWORD:</lable>
+            </td>
+            <td>
+                <input type="password" placeholder="password" name="password1"  required  />
+            </td>
+            </tr>
+            <tr>
+                <td>
+                 <lable> CONFIRM PASSWORD:</lable>
+            </td>
+            <td>
+                <input type="password" placeholder="confirm password" name="password2"  required  />
+            </td>
+            </tr>
+            <tr>
+                <td>
+       
+            <select  name="type"><option value="select">select type</option>
+                <option value="admin">admin</option>
+            </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+           <button type ="submit" name="submit">REGISTER</button>
+                </td>
+            </tr>
+            </table>
+        </form>
+        </div>
+    </body>
+            <script type="text/javascript">
+  function validate()
+{
+               
+                var returnValue= true;
+                var username= form.adminname.value;
+                var password1= form.password1.value;
+                var password2= form.password2.value;
+                if(username.length< 8)
+                {
+                    returnValue = false;
+                    alert("username must be 8 characters long \n please try again");
+                    document.frmRegistrer.txtUserName.focus();
+                }
+                if(password1.length < 8){
+                    returnValue = false;
+                    alert("password must be 8 characters long \n please try again");
+                    document.frmRegistrer.txtPassword.value = "";
+                    document.frmRegistrer.txtPassword2.value = "";
+                    document.frmRegistrer.txtPassword.focus();
+
+                }  if(password1 !== password2){
+                    returnValue = false;
+                    alert("Your password entry did not match \n please try again");
+                    document.frmRegistrer.txtPassword.value = "";
+                    document.frmRegistrer.txtPassword2.value = "";
+                    document.frmRegistrer.txtPassword.focus();
+                }
+                return returnValue;
+
+  }
+  
+  </script>
+  <style type="text/css"   >
+      body {
+	color: white;
+	display: flex;
+	padding: 20px;
+	min-height: 100vh;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: #a06060;
+	background: linear-gradient(130deg, #a06060 20%, #aaa 100%) no-repeat center center fixed;
+}
+
+ label {
+		top: 30px;
+		left: 10px;
+		opacity: 0.7;
+		font-weight: 100;
+		position: absolute;
+		letter-spacing: 2px;
+		pointer-events: none;
+		transition: all 0.2s ease-in;
+	}	
+
+
+input[type="submit"] {
+	border: none;
+	float: right;
+	outline: none;
+	padding: 10px;
+	font-weight: 300;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	box-shadow: salmon;
+	text-transform: uppercase;
+	background-color: rgba(255,255,255,0.2);
+	transition: all 0.2s ease-in;
+}
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+.box {
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+	max-width: 400px;
+	border-radius: 2px;
+	box-shadow: salmon;
+	background-color: rgba(0,0,0,0.2);
+}
+  input
+{
+   background-repeat:repeat-x;
+   border: 0px solid;
+   height:25px;
+   width:235px;
+}
+  </style>   
+
+
+
+</html>

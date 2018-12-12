@@ -1,0 +1,61 @@
+input
+{
+   background-image:url('images/fieldBG.gif');
+   background-repeat:repeat-x;
+   border: 0px solid;
+   height:25px;
+   width:200px;
+}nput[type="submit"] {
+	border: none;
+	float: right;
+	outline: none;
+	padding: 10px;
+	font-weight: 300;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	box-shadow: salmon;
+	text-transform: uppercase;
+	background-color: rgba(255,255,255,0.2);
+	transition: all 0.2s ease-in;
+}
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+.box {
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+	max-width: 400px;
+	border-radius: 2px;
+	box-shadow: salmon;
+	background-color: rgba(0,0,0,0.2);
+}
+
+      body {
+	color: white;
+	display: flex;
+	padding: 20px;
+	min-height: 100vh;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: #a06060;
+	background: linear-gradient(130deg, #a06060 20%, #aaa 100%) no-repeat center center fixed;
+}
+
+ label {
+		top: 30px;
+		left: 10px;
+		opacity: 0.7;
+		font-weight: 100;
+		position: absolute;
+		letter-spacing: 2px;
+		pointer-events: none;
+		transition: all 0.2s ease-in;
+	}	
+
