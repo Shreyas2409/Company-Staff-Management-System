@@ -1,2 +1,3 @@
 # mini-project-dbms
-just a basic web app 
+
+Web application which uses html,css ,java and a database 
